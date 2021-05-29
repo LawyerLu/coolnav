@@ -97,7 +97,7 @@ html,body{height: 100%}
 /*滑动页面*/
 
 
-#hSiteNav{width:640px;margin:25px auto 15px auto;overflow: hidden;}
+#hSiteNav{width:740px;margin:25px auto 15px auto;overflow: hidden;}
 .hNav{float: left;width:60px;height:34px;text-align: center;color: #919191;font-size: 16px;cursor:pointer;line-height:30px;font-family: HYYiSongW;}
 .hNav:hover{color:#0071ff;background-position: 0 28px;background-repeat: no-repeat;}
 .currentHNav{color:#0071ff;background-image: url(images/hNavGrayLine.png);background-position: 0 28px;background-repeat: no-repeat;font-family: HYYiSongW;}
@@ -114,7 +114,7 @@ html,body{height: 100%}
 .hSiteImgNeets{background-image: url(images/hSiteImgNeets.png);}
 
 .hSiteName{font-family: HYYiSongW;font-size: 16px;color:#545454;float: left;display: block;width: 101px;height: 20px;margin: 15px 0px 15px 0px;line-height:20px}
-.hZhengfa,.hQuzhan,.hTuku,.hXuexi,.hShenghuo,.hGongju,.hZhanzhang,.hSoso,.hBangong,.hMoulem{display: none;}
+.hZhengfa,.hQuzhan,.hTuku,.hXuexi,.hShenghuo,.hGongju,.hZhanzhang,.hSoso,.hBangong,.hSheji,.hMoulem{display: none;}
 .promptBtn{width: 20px;height: 20px;background-image:url(images/searchChoice/prompt.png);position: absolute;top:15px;right:60px;cursor: pointer;}
 .promptText{font-size:13px;color: #545454;display:none;overflow: hidden;width:auto;height:auto;background-color: white;position: absolute;top:36px;right:-45px;border:solid 1px #cccccc;border-radius: 10px;z-index: 41;padding:10px;}
 

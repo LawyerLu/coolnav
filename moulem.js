@@ -171,6 +171,16 @@ hoverEvent: function(){
 } 
 }); 
 
+
+$('.hShejiBtn').hoverDelay({ 
+hoverEvent: function(){ 
+		$('.hSiteBox').hide()
+		$('.hSheji').show()
+		$(".hNav").removeClass("currentHNav")
+		$(".hShejiBtn").addClass("currentHNav")	
+} 
+}); 
+
 $('.promptBtn').hoverDelay({ 
 hoverEvent: function(){ 
 		$('.promptText').show()
