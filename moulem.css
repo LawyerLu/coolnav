@@ -1,0 +1,342 @@
+*{padding:0;margin:0;text-decoration:none;list-style: none;font-family: '微软雅黑';outline: none;}
+a{color: inherit;}
+@font-face {
+ font-family: 'HYYiSongW';
+ src: local('HYYiSongW Regular'),
+        local('HYYiSongW'),
+        url('https://img.luziyang.cn/font/HYYiSongW.woff') format('woff'),
+        url('https://img.luziyang.cn/font/HYYiSongW.eot') format('eot'),
+        url('https://img.luziyang.cn/font/HYYiSongW.woff2') format('woff2'),
+        url('https://img.luziyang.cn/font/HYYiSongW.TTF') format('truetype'),
+        url('https://img.luziyang.cn/font/HYYiSongW.svg#HYYiSongW') format('svg');
+} 
+
+img{border:0 none;}
+.footer{
+display:none;
+}
+.hSiteLine img {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 15px 10px 10px 10px; 
+}
+#divimg {
+background-image: url(images/logo.png);
+background-repeat: no-repeat;
+background-size: cover;
+width: 278px;
+height: 112px; 
+z-index: 999999;
+}
+
+input[type=text]::-ms-clear{
+                display: none;
+                 
+            }
+            input::-webkit-search-cancel-button{
+                display: none;
+            } 
+            input.t {
+                border:1px solid #fff;
+                background:#fff;           
+                padding-left:5px;
+                height:30px;
+                line-height:30px ;
+                font-size:12px;
+                font-color: #004779;
+                 
+            }
+
+
+html,body{height: 100%}
+#bg{min-height: 100% ;width:100%;position: relative;}
+#bigBox{width:1000px;height:485px;position: absolute;left: 50%;top:50%;margin-top:-242px;margin-left:-500px;}
+
+#logoBox{overflow: hidden;width:254px;margin:0 auto;margin-bottom: 30px;}
+#logoLeft{width:100px;height:100px;float: left;position: relative;overflow: hidden;cursor: pointer;}
+#logoLeftFe{position: absolute;width: 100px;height: 900px;background-image: url(images/logoLeft.png);background-repeat: no-repeat;top:0px;}
+#logoFixed{position: absolute;background-image:;width:100px;height: 100px;z-index: 3}
+#logoRight{width:139px;height:56px;background-image:url(images/logo.png);background-repeat: no-repeat;float:right;top:0;margin-top: 23px;}
+
+#searchBox{overflow: hidden;width:1000px;height: 50px;}
+#search{width:908px;height: 46px;border: 1px solid #8e8e8e;border-right:0 none;float:left;color:#afafaf;
+    font-size: 16px;padding-left:0px;color:#15120e;border-left: 0;}
+#search:hover{color:#15120e}
+#searchBtn{    width: 50px;
+    height: 48px;
+    background-color: #267fef;
+    border: 1px solid #267fef;border-top-right-radius:15px;border-bottom-right-radius:15px;float:left;
+    background-image: url(images/searchBtn.png);background-position:12px 12px;background-repeat: no-repeat;cursor:pointer;}
+.searchChoice{width:40px;height:46px;background-color:white;    border: 1px solid #8e8e8e;border-right: 0;border-top-left-radius:15px;border-bottom-left-radius:15px;float:left;
+    background-position:12px 12px;background-repeat: no-repeat;position: relative;}
+.sChoiceBtn{width: 20px;height: 20px;margin:13px auto 0 auto;cursor:pointer;background-image:url(images/searchChoice/scbaidu.png);background-repeat: no-repeat;opacity: 0.4;}
+.scBigBox{display:none;overflow: hidden;width:auto;height:auto;background-color: white;position: absolute;top:36px;border:solid 1px #cccccc;border-radius: 10px;z-index: 41;}
+.scSmallBox{overflow: hidden;width:130px;height:34px;color: #545454;cursor: pointer;}
+.scSmallBox:hover{background-color:#f0f0f0;}
+.scImg{width: 20px;height: 20px;margin: 7px 10px 0px 10px;float: left;}
+.scName{font-size: 16px;float: left;display: block;width:80px;height: 20px;line-height:20px;margin-top:7px;}
+
+
+
+#recoPage{width:501px;height:204px;background-image: url(images/recoPage.png);background-repeat: no-repeat;left: 50%;top:45%;margin-top:-150px;margin-left:-250px;position:absolute;display: none;opacity: 0;}
+.recoBtn{width:171px;height:36px;cursor: pointer;background-image: url(images/recoPageBtn.png);background-repeat: no-repeat;margin:150px 0 0 250px;position:absolute;}
+
+
+#copyright{margin:0 auto;width:290px;height:40px;position: absolute;bottom:0px;left:50%;margin-left:-145px;font-size: 14px;color: #afafaf;}
+#copyrightIndex{margin:0 auto;width:290px;height:50px;position: absolute;bottom:0px;left:50%;margin-left:-145px;font-size: 14px;color: #afafaf;}
+#beian{font-size:13px;}
+#beian:hover{color:#8e8e8e}
+.aboutBtn{}
+.aboutBtn:hover{color:#8e8e8e;}
+.bottomButton{width: 100%;text-align: center;}
+.bottomCopyright{width: 100%;text-align: center;}
+
+
+
+/*滑动页面*/
+
+
+#hSiteNav{width:640px;margin:25px auto 15px auto;overflow: hidden;}
+.hNav{float: left;width:60px;height:34px;text-align: center;color: #919191;font-size: 16px;cursor:pointer;line-height:30px;font-family: HYYiSongW;}
+.hNav:hover{color:#0071ff;background-position: 0 28px;background-repeat: no-repeat;}
+.currentHNav{color:#0071ff;background-image: url(images/hNavGrayLine.png);background-position: 0 28px;background-repeat: no-repeat;font-family: HYYiSongW;}
+.hSiteBigBox{width:1200px;position:relative;}
+
+.hSiteBox{width:1200px;position: absolute;}
+.hSiteLine{width: 100%;height: 50px;overflow: hidden;margin-bottom: 5px;}
+.hSite{width: 144px;height:50px;float: left;display: block;margin-right:27px;}
+.hSite:hover{background-image:url(images/hSiteBg.png);background-repeat: no-repeat;}
+.hSiteImg{width:20px;height: 20px;float: left;margin:15px 10px 0 10px;background-repeat: no-repeat;}
+.hSiteImg1{background-image: url(images/hSiteImg1.png);}
+.hSiteImg2{background-image: url(images/hSiteImg2.png);}
+.hSiteImg3{background-image: url(images/hSiteImg3.png);}
+.hSiteImgNeets{background-image: url(images/hSiteImgNeets.png);}
+
+.hSiteName{font-family: HYYiSongW;font-size: 16px;color:#545454;float: left;display: block;width: 101px;height: 20px;margin: 15px 0px 15px 0px;line-height:20px}
+.hZhengfa,.hQuzhan,.hTuku,.hXuexi,.hShenghuo,.hGongju,.hZhanzhang,.hSoso,.hBangong,.hMoulem{display: none;}
+.promptBtn{width: 20px;height: 20px;background-image:url(images/searchChoice/prompt.png);position: absolute;top:15px;right:60px;cursor: pointer;}
+.promptText{font-size:13px;color: #545454;display:none;overflow: hidden;width:auto;height:auto;background-color: white;position: absolute;top:36px;right:-45px;border:solid 1px #cccccc;border-radius: 10px;z-index: 41;padding:10px;}
+
+
+
+
+
+/*---------------------搜索框样式-------------------------------*/
+#search_bg{
+    height: 50px
+    
+}
+
+
+#search_bg #button_bg{
+    
+    
+
+    position: relative;
+}
+#search_bg #button_bg .textb{
+    display: block;
+    
+    outline: none;
+    
+   
+    float:left;
+   
+    text-align: left;
+   
+    
+}
+#search_bg #button_bg .subb{
+    display: block;
+   
+    outline: none;
+    
+   
+    float: left;
+    
+    
+   
+    
+    
+    
+}
+
+#search_bg #button_bg .keyword{
+    width: 924px;
+    height: auto;
+    border:solid 1px #cccccc;
+    border-top:none;
+    position: absolute;
+    top:50px;
+    left:25px;
+    z-index:40;
+    
+    display: none;
+    font-size: 15px;
+    background-color: white;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+#search_bg #button_bg .keyword span{
+    display: block;
+    clear: both;
+    width:100%;
+    height: 28px;
+    text-indent:15px;
+    line-height:28px;
+    cursor: pointer;
+    background:white;
+    border-bottom:solid 1px #ffffff;
+   
+}
+#search_bg #button_bg .keyword span:hover{
+    background: rgba(0,0,0,0.5);
+}
+
+/*------------------seach结果集样式---------------------*/
+
+#search_result{
+width: 960px;
+height: auto;
+min-height: 400px;
+overflow: hidden;
+}
+#search_result .result_num{
+width: 960px;
+height: 26px;
+text-align: left;
+text-indent: 15px;
+font-size: 15px;
+line-height: 26px;
+color:#767676;
+
+}
+#search_result .result{
+width: 960px;
+height: auto;
+max-height: 110px;
+margin-top:15px;
+margin-bottom: 15px;
+padding-top: 15px;
+padding-bottom: 15px;
+text-indent: 20px;
+line-height: 25px;
+color: #333333;
+text-overflow: ellipsis;
+overflow: hidden;/*以上三行实现溢出显示省略号*/
+border-bottom:dashed 1px #cccccc;
+}
+#result_page{
+    width: 960px;
+    height: 30px;
+}
+#result_page a{
+    display: block;
+    float: left;
+    margin-left:5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+    background: none;
+    color: #363636;
+    border:solid 1px #A5A5A5;
+    transition:all .5s linear;
+    -webkit-transition: al.5s linear;/* Safari and Chrome or liebao*/
+    -moz-transition: all .5s linear;/*Firefox */
+    -o-transition: all .5s linear;/*Opera */
+    -ms-transition: all .5s line;
+}
+
+/*优化UI**/
+.yiyan {
+    position: absolute;
+    width: 500px;
+    text-align: center;
+    left: 50%;
+    bottom: -30px;
+    font-size: 11px;
+    line-height: 2.5;
+    margin-left: -250px;
+    letter-spacing: 2px;
+    color: #afafaf;
+ }
+ .yiyan p {
+     font-family: HYYiSongW;
+ }
+.tianqi {
+    width: 168px;
+    position: absolute;
+    margin-left: -500px;
+    left: 50%;
+    top: 20px;
+    z-index: 99999;
+}
+
+#calendar{
+    background-color: #fff;
+    width: 100px;
+    height: 125px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+#calendar .yearMon{
+    background-color: #5192ff;
+    padding: 5px 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+#calendar .date{
+    color: #5192ff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#calendar .week{
+    font-size:14px;
+    color: #5191fe;
+}
+
+.toptop {
+
+}
+
+.rili {
+    position: absolute;
+    margin-right: -500px;
+    right: 50%;
+    top: 20px;
+    background: #ffffff;
+    box-shadow: 14px 14px 28px #cccccc, -14px -14px 28px #ffffff;
+}
+
+
+@media screen and (max-width: 1280px) {/*兼容主流笔记本*/
+    .hSiteName{
+        font-size: 13px;
+    }
+    #calendar {
+        width: 90px;
+        height: 115px;
+        border-radius: 8px;
+    }
+    #calendar .yearMon {
+        font-size: 11px;
+    }
+    #calendar .date {
+        font-size: 50px;
+    }
+    #calendar .week {
+        font-size: 13px;  
+    }
+   .hNav {
+        font-size: 14px;
+    }
+
+}
