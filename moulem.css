@@ -10,7 +10,10 @@ a{color: inherit;}
         url('https://img.luziyang.cn/font/HYYiSongW.TTF') format('truetype'),
         url('https://img.luziyang.cn/font/HYYiSongW.svg#HYYiSongW') format('svg');
 } 
-
+.update {
+    font-size: 11px;
+     font-family: HYYiSongW;
+}
 img{border:0 none;}
 .footer{
 display:none;
