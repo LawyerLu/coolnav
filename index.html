@@ -1,1076 +1,796 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<title>酷导航 - 干净清爽的上网主页</title>
-	<meta name="keywords" content="酷导航，网址导航,导航网,导航首页,导航地址,简约导航网站,无广告导航网站" />
-	<meta name="description" content="网址导航是一个轻导航网站，提供一个清爽干净的上网入口。清爽界面，简约导航，希望大家能有一个好的上网浏览心情，以及便捷的网址导航体验。" />
-	<link type="text/css" rel='stylesheet' href="moulem.css?v=2.0">
-	<script src='jquery-1.8.0.js' type='text/javascript'></script>
-	<script type="text/javascript" src='keyword.js'></script>
-	<script type="text/javascript" src='moulem.js'></script>
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>酷导航 - 干净美观的上网主页</title>
+
+	<!--资源搜索引擎预解析-->
+	<link rel="dns-prefetch" href="https://cdn.luziyang.cn/">
+	<link rel="dns-prefetch" href="https://www.hifini.com/">
+	<link rel="dns-prefetch" href="https://soupian.pro/">
+	<link rel="dns-prefetch" href="https://www.pansearch.me/">
+	<link rel="dns-prefetch" href="https://translate.google.com/">
+
+	<meta name="keywords" content="酷导航,网址导航,上网主页,导航网,导航首页,导航地址,简约导航网站,无广告导航网站" />
+	<meta name="description" content="网址导航是一个轻导航网站，提供一个清爽干净的上网入口。清爽界面，简约导航，实用全面，没有任何广告。" />
+	<link type="text/css" rel='stylesheet' href="static/main.css">
+	<script type='text/javascript' src="static/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src='static/keyword.js'></script>
+	<script type="text/javascript" src='static/jquery.idTabs.min.js'></script>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
 </head>
-
 <body>
+	<!--logo-->
+	<div class="logo">
+	</div>
 
-	<div id="bg" style="overflow: hidden;">
-		<div class="toptop">
-		<div class="tianqi"><div id="he-plugin-simple"></div></div>
-		 <div class="rili" id="calendar">
-                            <div class="yearMon"></div>
-                            <div class="date"></div>
-                            <div class="week"></div>
-         </div>
+	<!--搜索框-->	
+	<div class="search">
+      	<!--搜索引擎切换-->
+       	<div class="searchChoice">
+           <div class="change" title="切换搜索引擎"></div>
+       	    <div class="BigBox">
+				    	<div class="SmallBox">									
+				    		<img class="searchIcon" src="static/img/searchIcon/baidu.png">
+				    		<span class="searchName">百度</span>
+				    	</div>
+				    	<div class="SmallBox">
+				    		<img class="searchIcon" src="static/img/searchIcon/wxso.svg">
+				    		<span class="searchName">搜一搜</span>
+				    	</div>
+				    	<div class="SmallBox">
+				    		<img class="searchIcon" src="static/img/searchIcon/bing.svg">
+				    		<span class="searchName">必应</span>
+				    	</div>
+				    	<div class="SmallBox">
+				    		<img class="searchIcon" src="static/img/searchIcon/so.png">
+				    		<span class="searchName">360搜索</span>
+				    	</div>
+				    	<div class="SmallBox">
+				    		<img class="searchIcon" src="static/img/searchIcon/google.png">
+				    		<span class="searchName">谷歌</span>
+				    	</div>
+				    	<div class="SmallBox">
+				    		<img class="searchIcon" src="static/img/searchIcon/soupian.png">
+				    		<span class="searchName">搜片</span>
+				    	</div>
+				    	<div class="SmallBox">
+				    		<img class="searchIcon" src="static/img/searchIcon/music.png">
+				    		<span class="searchName">搜音乐</span>
+				    	</div>
+				    	<div class="SmallBox">
+				    		<img class="searchIcon" src="static/img/searchIcon/pan.png">
+				    		<span class="searchName">网盘资源</span>
+				    	</div>
+				    	<div class="SmallBox">
+				    		<img class="searchIcon" src="static/img/searchIcon/translate.png">
+				    		<span class="searchName">翻译</span>
+				    	</div>
+
+				    </div>
+
+       </div>
+       <!--引擎切换结束-->
+	           
+       <form action="https://www.baidu.com/s" method="GET" target="_blank" id='searchCheck' >
+           <input type="text" value="" x-webkit-speech="" lang="zh-CN" placeholder="输入关键词探索更大的世界！" name="wd" id='search' autocomplete="off">
+           <input type="submit" value=" " id='searchBtn' title="点击搜索">
+       </form>
+
+       <div class="promptBtn"></div>
+       <div class="promptText"><b>不喜欢该搜索引擎？</b><br>点击搜索框最左侧图标<br>可切换为其他搜索引擎</div>
+       <div class="keyword"></div>
+     
+	</div>
+	<!--搜索框结束-->
+
+	<!--网址tab栏-->
+	<div class="idTabs links"> 
+		<a href="#office" class="selected">办公</a> 
+		<a href="#learn">学习</a> 
+		<a href="#find">检索</a> 
+		<a href="#tools">工具</a> 
+		<a href="#relax">休闲</a> 
+		<a href="#IT">IT</a> 
+		<a href="#AI">AI</a> 
+		<a href="#source">资源</a> 
+	</div> 
+
+	<!--网址列表栏-->
+	<!--办公类网站-->
+	<div class="links-list" id="office">
+		<a href="https://www.kinglex.cn/ui/work/home" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/kinglex.ico)"></span>
+			金助理
+		</a>
+		<a href="https://mp.weixin.qq.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/wxmp.ico)"></span>
+			微信公众号
+		</a>
+		<a href="https://www.88.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/88.png)"></span>
+			88邮箱
+		</a>
+		<a href="https://www.email.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/email.png)"></span>
+			Email邮箱
+		</a>
+		<a href="https://mail.tju.edu.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/tju.ico)"></span>
+			天大邮箱
+		</a>
+		<a href="https://1895.yuque.com/dashboard/org_wiki" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/yuque.png)"></span>
+			语雀案管系统
+		</a>
+		<a href="https://effidit.qq.com/demo" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/effidit.png)"></span>
+			Effidit
+		</a>
+		<a href="https://www.kdocs.cn/?show=all" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/wps.png)"></span>
+			金山文档
+		</a>
+		<a href="https://yun.kuaiya.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/kuaiya.ico)"></span>
+			快牙传文件
+		</a>
+		<a href="http://oa.jingsh.com/Account/Login" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/jingsh.png)"></span>
+			京师OA
+		</a>
+		<a href="https://luziyang.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/lzy.ico)"></span>
+			鲁子阳律师
+		</a>
+		<a href="https://localsend.org/zh-CN" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/localsend.ico)"></span>
+			LocalSend
+		</a>
+		<a href="https://www.amazon.com/sendtokindle" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/kindle.ico)"></span>
+			发送至Kindle
+		</a>
+		<a href="https://drop.space/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/drop.png)"></span>
+			drop.space
+		</a>
+		<a href="https://ssfw.gdcourts.gov.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/gdssfw.ico)"></span>
+			广东诉讼服务
+		</a>
+		<a href="https://www.12309.gov.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/gov.ico)"></span>
+			中国检察网
+		</a>
+		<a href="http://www.szlawyers.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/szlawyer.png)"></span>
+			深圳律协
+		</a>
+		<a href="http://192.168.3.1/html/index.html#/login" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/huawei.png)"></span>
+			华为路由器
+		</a>
+		<a href="https://mubu.com/app" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/mubu.ico)"></span>
+			幕布
+		</a>
+		<a href="https://shimo.im/desktop" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/shimo.ico)"></span>
+			石墨文档
+		</a>
+		<a href="https://docs.qq.com/desktop" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/qqdoc.ico)"></span>
+			腾讯文档
+		</a>
+		<a href="https://work.66law.cn/clue/allSource" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/office/hualv.svg)"></span>
+			华律工作台
+		</a>
+
+	</div> 
+
+	<!--学习类网站-->
+	<div class="links-list" id="learn">
+		<a href="https://book-searcher.eu.org/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/search-book.ico)"></span>
+			电子书资源
+		</a>
+		<a href="https://zh.z-library.sk/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/z-library.svg)"></span>
+			Z-library
+		</a>
+		<a href="https://weread.qq.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/weread.ico)"></span>
+			微信读书
+		</a>
+
+		<a href="https://www.chinacourt.org/article/index/id/MzAwNDAwMjAwMSACAAA.shtml" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/court.ico)"></span>
+			中国法院网
+		</a>
+		<a href="http://gongbao.court.gov.cn/ArticleList.html?serial_no=sfjs" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/gov.ico)"></span>
+			最高院公报
+		</a>
+		<a href="https://www.civillaw.com.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/civilaw.ico)"></span>
+			民商法律网
+		</a>
+		<a href="https://pubscholar.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/pubscholar.ico)"></span>
+			PubScholar
+		</a>
+		<a href="https://open.163.com/ted/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/163ke.ico)"></span>
+			网易公开课
+		</a>
+		<a href="https://www.51zxw.net/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/51zxw.ico)"></span>
+			我要自学网
+		</a>
+		<a href="https://www.doyoudo.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/doyoudo.ico)"></span>
+			doyoudo
+		</a>
+		<a href="https://huke88.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/huke.ico)"></span>
+			虎课网
+		</a>
+		<a href="http://www.missyuan.net/photoshop/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/ps.ico)"></span>
+			PS教程
+		</a>
+		<a href="https://www.juzikong.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/learn/juzikong.ico)"></span>
+			句子控
+		</a>
+
+	</div>
+	<!--检索查询类网站-->
+	<div class="links-list" id="find">
+		<a href="https://flk.npc.gov.cn/index.html" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/gov.ico)"></span>
+			法律法规库
+		</a>
+		<a href="https://meta.law/#/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/metalaw.png)"></span>
+			MetaLaw
+		</a>
+		<a href="https://www.spp.gov.cn/spp/xf/index.shtml" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/jcy.ico)"></span>
+			检察法律法规
+		</a>
+		<a href="https://chineselaw.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/chineselaw.png)"></span>
+			元典智库
+		</a>
+		<a href="https://yesen.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/yesen.ico)"></span>
+			法律导航
+		</a>
+		<a href="https://sfb-vip.faxin.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/faxin.ico)"></span>
+			法信
+		</a>
+		<a href="http://www.law-lib.com/law/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/law-lib.ico)"></span>
+			法律图书馆
+		</a>
+		<a href="https://wenshu.court.gov.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/caipan.ico)"></span>
+			裁判文书网
+		</a>
+		<a href="https://rmfyalk.court.gov.cn" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/caipan.ico)"></span>
+			法院案例库
+		</a>
+		<a href="https://www.jufaanli.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/jufa.ico)"></span>
+			聚法案例
+		</a>
+		<a href="https://alphalawyer.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/alpha.ico)"></span>
+			Alpha
+		</a>
+		<a href="https://www.ilawpress.com/law/group" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/ilawpress.ico)"></span>
+			有章法律
+		</a>	
+		<a href="https://www.pkulaw.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/pkufb.ico)"></span>
+			北大法宝
+		</a>	
+		<a href="https://www.lawsdata.com/#/home" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/bashou.ico)"></span>
+			把手案例
+		</a>	
+		<a href="https://law.wkinfo.com.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/wkinfo.ico)"></span>
+			威科先行
+		</a>	
+		<a href="https://zxgk.court.gov.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/court.ico)"></span>
+			执行信息公开
+		</a>	
+		<a href="https://www.creditchina.gov.cn/xinyongfuwu/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/gov.ico)"></span>
+			信用中国
+		</a>	
+		<a href="https://www.cncredit.org.cn/credit/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/cncredit.ico)"></span>
+			企业信用公示
+		</a>	
+		<a href="https://shiming.gsxt.gov.cn/index.html" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/gov.ico)"></span>
+			企业信息公示
+		</a>	
+		<a href="https://www.qcc.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/qcc.ico)"></span>
+			企查查
+		</a>	
+		<a href="https://www.qixin.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/qixin.ico)"></span>
+			启信宝
+		</a>	
+		<a href="https://wcjs.sbj.cnipa.gov.cn/txnT01.do" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/cnipa.png)"></span>
+			商标查询
+		</a>
+		<a href="http://www.gjsy.gov.cn/sydwfrxxcx/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/find/gov.ico)"></span>
+			事业单位查询
+		</a>
+
+	</div>
+	<!--工具类的网站-->
+	<div class="links-list" id="tools">
+		<a href="https://yasuo.xunjiepdf.com/img/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/xjyasuo.png)"></span>
+			图片压缩
+		</a>
+		<a href="https://www.superbed.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/superbed.ico)"></span>
+			聚合图床
+		</a>
+		<a href="https://mockuphone.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/mockuphone.png)"></span>
+			图片加壳
+		</a>
+		<a href="https://deviceshots.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/deviceshots.png)"></span>
+			截图加壳
+		</a>
+		<a href="https://tool.browser.qq.com/category/develop" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/qhelp.ico)"></span>
+			帮小忙
+		</a>
+		<a href="https://www.weibodang.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/downvideo.png)"></span>
+			视频下载
+		</a>
+
+		<a href="https://cli.im/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/cli.ico)"></span>
+			草料二维码
+		</a>
+		<a href="https://cowtransfer.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/cowtransfer.png)"></span>
+			奶牛快传
+		</a>
+		<a href="https://www.iiice.cn/#/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/iiice.ico)"></span>
+			下次一定
+		</a>
+		<a href="https://www.bejson.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/bejson.ico)"></span>
+			网站工具箱
+		</a>
+		<a href="https://imgse.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/imgse.png)"></span>
+			路过图床
+		</a>
+		<a href="https://tools.pdf24.org/zh/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/pdf24.png)"></span>
+			PDF工具箱
+		</a>
+		<a href="https://imagecompressor.com/zh/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/picys.png)"></span>
+			图片压缩
+		</a>
+		<a href="https://zh.pixfix.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/pixfix.png)"></span>
+			修复失真图
+		</a>
+		<a href="https://www.apowersoft.cn/heic-to-jpg" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/heic.png)"></span>
+			HEIC转化
+		</a>
+		<a href="https://wetransfer.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/wetransfer.ico)"></span>
+			Wetransfer
+		</a>
+		<a href="https://www.ilovepdf.com/zh-cn" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/ilovepdf.png)"></span>
+			ilovePDF
+		</a>
+		<a href="https://www.wenshushu.cn/?i=2DJCCC" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/wenshushu.ico)"></span>
+			文叔叔
+		</a>
+		<a href="https://arc.tencent.com/zh/ai-demos/faceRestoration" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/arc.ico)"></span>
+			人像修复
+		</a>
+		<a href="https://toolb.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/toolb.ico)"></span>
+			在线工具
+		</a>
+		<a href="https://tool.lu/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/tool.ico)"></span>
+			在线工具
+		</a>
+		<a href="https://cmwtat.cloudmoe.com/cn.html" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/microsoft.png)"></span>
+			windows激活
+		</a>
+		<a href="https://rufus.ie/zh/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/usb.png)"></span>
+			制作启动盘
+		</a>
+		<a href="https://next.itellyou.cn/Original/Index" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/tools/itellyou.ico)"></span>
+			原版系统
+		</a>
+
+	</div>
+	<!--影音休闲类网站-->
+	<div class="links-list" id="relax">
+		<a href="https://www.huya.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/huya.ico)"></span>
+			虎牙直播
+		</a>
+		<a href="https://www.meijutt.tv/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/mjtt.ico)"></span>
+			美剧天堂
+		</a>
+		<a href="https://v.qq.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/vqq.ico)"></span>
+			腾讯视频
+		</a>
+		<a href="https://www.youku.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/youku.png)"></span>
+			优酷视频
+		</a>
+		<a href="https://www.youtube.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/youtube.png)"></span>
+			Youtube
+		</a>
+		<a href="https://www.bilibili.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/bilibili.ico)"></span>
+			哔哩哔哩
+		</a>
+		<a href="https://www.skypixel.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/skyp.ico)"></span>
+			天空之城
+		</a>
+		<a href="https://wallhaven.cc/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/wallhaven.ico)"></span>
+			高清壁纸
+		</a>
+		<a href="http://www.win4000.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/meizhuo.ico)"></span>
+			美桌壁纸
+		</a>
+		<a href="https://weibo.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/weibo.ico)"></span>
+			微博
+		</a>
+		<a href="https://www.zhihu.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/zhihu.ico)"></span>
+			知乎
+		</a>
+		<a href="https://blog.luziyang.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/relax/blog.png)"></span>
+			彼岸临窗
+		</a>
+
+
+	</div>
+	<!--IT互联网开发类网站-->
+	<div class="links-list" id="IT">
+		<a href="https://github.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/github.ico)"></span>
+			GitHub
+		</a>
+		<a href="https://console.cloud.tencent.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/qyun.ico)"></span>
+			腾讯云
+		</a>
+		<a href="https://cosbrowser.cloud.tencent.com/login" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/cos.ico)"></span>
+			COSbrowser
+		</a>
+		<a href="https://sms-activate.guru/cn/freeNumbers" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/sms.ico)"></span>
+			免费虚拟号码
+		</a>
+		<a href="https://layui.dev/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/layui.ico)"></span>
+			Layui
+		</a>
+		<a href="https://neumorphism.io/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/nitai.ico)"></span>
+			拟态效果
+		</a>
+		<a href="https://uiverse.io/elements" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/uiverse.ico)"></span>
+			UIverse
+		</a>
+		<a href="https://www.bootstrapmb.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/bootstrapmb.ico)"></span>
+			响应式模版
+		</a>
+		<a href="https://www.figma.com/community" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/figma.png)"></span>
+			Figma
+		</a>
+		<a href="https://www.w3school.com.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/w3.png)"></span>
+			w3school
+		</a>
+		<a href="https://tdesign.tencent.com/miniprogram/overview" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/tdeisgn.png)"></span>
+			TDesign
+		</a>
+		<a href="https://console.qweather.com/#/console" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/qweather.ico)"></span>
+			和风天气
+		</a>
+		<a href="https://hitokoto.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/yiyan.png)"></span>
+			一言
+		</a>
+		<a href="https://www.alapi.cn/api/list/all" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/alapi.ico)"></span>
+			alapi
+		</a>
+		<a href="https://www.grabient.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/grabient.ico)"></span>
+			渐变背景
+		</a>
+		<a href="https://www.bt.cn/new/btcode.html" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/bt.ico)"></span>
+			宝塔命令
+		</a>
+		<a href="https://dashboard.emailjs.com/admin" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/emailjs.ico)"></span>
+			EmailJS
+		</a>
+		<a href="https://lbs.qq.com/getPoint/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/qmap.ico)"></span>
+			腾讯位置
+		</a>
+		<a href="https://www.lanzou.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/lanzou.ico)"></span>
+			蓝奏云
+		</a>
+		<a href="https://www.fontke.com/tool/convfont/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/font.png)"></span>
+			字体转化
+		</a>
+		<a href="https://auth.geetest.com/login/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/geetest.png)"></span>
+			极验
+		</a>
+		<a href="https://www.fonts.net.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/fonts.ico)"></span>
+			字体天下
+		</a>
+		<a href="https://www.iconfont.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/IT/iconfont.svg)"></span>
+			iconfont
+		</a>
+
+
+	</div>
+	<!--AI人工智能类网站-->
+	<div class="links-list" id="AI">
+		<a href="https://chat.openai.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/chatgpt.png)"></span>
+			ChatGPT
+		</a>
+		<a href="https://chat.deepseek.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/deepseek.svg)"></span>
+			deepseek
+		</a>
+		<a href="https://bot.360.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/360bot.png)"></span>
+			AI助手
+		</a>
+		<a href="https://openi.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/openi.png)"></span>
+			AI工具
+		</a>
+		<a href="https://ttsmaker.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/ttsmaker.ico)"></span>
+			文字转语音
+		</a>
+		<a href="https://www.buguniaopeiyin.com/peiyin/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/bgnpy.ico)"></span>
+			布谷鸟配音
+		</a>
+		<a href="https://www.narakeet.com/app/text-to-audio/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/narakeet.png)"></span>
+			文字转语音
+		</a>
+		<a href="https://zenvideo.qq.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/zenvideo.ico)"></span>
+			腾讯智影
+		</a>
+		<a href="https://peiyin.xunfei.cn/make" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/xunfei.ico)"></span>
+			讯飞配音
+		</a>
+		<a href="https://chattts.com/zh#Demo" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/chattts.ico)"></span>
+			ChatTTS
+		</a>
+		<a href="https://yuanbao.tencent.com/chat/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/yuanbao.ico)"></span>
+			腾讯元宝
+		</a>
+		<a href="https://kimi.moonshot.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/kimi.ico)"></span>
+			Kimi
+		</a>
+		<a href="https://www.doubao.com/chat/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/doubao.png)"></span>
+			豆包
+		</a>
+		<a href="https://chatbot.weixin.qq.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/AI/wxchat.ico)"></span>
+			微信对话平台
+		</a>
+
+
+
+	</div>
+	<!--资源素材类网站-->
+	<div class="links-list" id="source">
+		<a href="https://pansou.cc/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/baidu.ico)"></span>
+			盘搜搜
+		</a>
+		<a href="https://unsplash.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/unsplash.png)"></span>
+			unsplash
+		</a>
+		<a href="https://wallpaper.ur1.fun/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/bizhi.svg)"></span>
+			电脑壁纸
+		</a>
+		<a href="https://www.freepik.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/freepik.png)"></span>
+			FreePik
+		</a>
+		<a href="https://www.pinterest.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/pin.ico)"></span>
+			Pinterest
+		</a>
+		<a href="https://github.com/lyswhut/lx-music-desktop/issues/5" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/github.ico)"></span>
+			音乐源
+		</a>
+		<a href="http://www.pptbz.com/ppt/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/pptbz.ico)"></span>
+			PPT宝藏
+		</a>
+		<a href="https://www.ypppt.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/ypppt.ico)"></span>
+			优品PPT
+		</a>
+		<a href="https://www.51pptmoban.com/ppt/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/51ppt.ico)"></span>
+			51PPT
+		</a>
+		<a href="https://www.1ppt.com/moban/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/1ppt.ico)"></span>
+			第1PPT
+		</a>
+		<a href="https://www.officeplus.cn/PPT/template/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/officeplus.svg)"></span>
+			微软PPT
+		</a>
+		<a href="https://www.todaybing.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/bing.png)"></span>
+			必应壁纸
+		</a>
+		<a href="https://www.52pojie.cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/52pojie.ico)"></span>
+			吾爱破解
+		</a>
+		<a href="https://dribbble.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/dribbble.png)"></span>
+			Dribbble
+		</a>
+		<a href="https://699pic.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/shetu.ico)"></span>
+			摄图网
+		</a>
+		<a href="https://www.pexels.com/zh-cn/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/pexels.png)"></span>
+			Pexels
+		</a>
+		<a href="https://pixabay.com/zh/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/pixabay.png)"></span>
+			Pixabay
+		</a>
+		<a href="https://www.hippopx.com/zh/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/hippopx.ico)"></span>
+			Hippopx
+		</a>
+		<a href="https://gratisography.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/gratisography.png)"></span>
+			Gratisography
+		</a>
+		<a href="https://stocksnap.io/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/stocksnap.png)"></span>
+			Stocksnap
+		</a>
+		<a href="https://www.hdwallpapers.net/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/hdwall.ico)"></span>
+			HDwallpapers
+		</a>
+		<a href="https://www.splitshire.com/best-new-free-stock-photos/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/splitshire.ico)"></span>
+			Splitshire
+		</a>
+		<a href="https://www.freeimages.com/cn" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/freeimages.png)"></span>
+			Freeimages
+		</a>
+		<a href="https://picjumbo.com/" rel="nofollow" target="_blank" >
+			<span style="background-image:url(ico/source/picjumbo.png)"></span>
+			Picjumbo
+		</a>
+
+	</div>
+
+
+
+
+
+	<!--底部footer--> 	
+	<div class="footer">
+        <div class="yiyan">
+          <p class="text-lead text-white" id="hitokoto"></p>
+    	    <span class="update">最近一次维护：2024-11-16</span>
         </div>
-		<div id='bigBox'>
-             <div id='divimg' style="text-align: center;margin:0 auto">
-                     <div class="yiyan">
-                     	<p class="text-lead text-white" id="hitokoto"></p>
-			<span class="update">最近一次维护：2022-10-13</span>
-                     </div>
-
-             </div>
-
-
-<!--无关键字跳转推荐网站js-->
-				<script>
-			        window.onload = function() {
-			            var searchCheck = document.getElementById("searchCheck");
-			            searchCheck.addEventListener("submit",function(event) {
-			                var wordCheck = document.getElementsByClassName("textb")[0];
-			                
-			                if (wordCheck.value.length <= 0) {
-			                    window.open("https://lawnote.cn");//推荐网站链接提交
-			                    event.preventDefault()
-			                    return false;
-			                } 
-			                 
-			            });
-			        }
-			    </script>
-<!--搜索框-->	
-			 <!--start search-->
-	            <div id="search_bg">
-	                <div id="button_bg">
-	                    <div class="searchChoice"><div class="sChoiceBtn" title="切换搜索引擎"></div>
-	                    	<div class="scBigBox">
-								<div class="scSmallBox">									
-									<img class="scImg" src="images/searchChoice/scbaidu.png">
-									<span class="scName">百度</span>
-								</div>
-								<div class="scSmallBox">
-									<img class="scImg" src="images/searchChoice/scsougou.png">
-									<span class="scName">搜狗</span>
-								</div>
-								<div class="scSmallBox">
-									<img class="scImg" src="images/searchChoice/scbing.png">
-									<span class="scName">必应</span>
-								</div>
-								<div class="scSmallBox">
-									<img class="scImg" src="images/searchChoice/sc360.png">
-									<span class="scName">360搜索</span>
-								</div>
-								<div class="scSmallBox">
-									<img class="scImg" src="images/searchChoice/scgoogle.png">
-									<span class="scName">谷歌</span>
-								</div>
-								<div class="scSmallBox">
-									<img class="scImg" src="images/searchChoice/sccili.png">
-									<span class="scName">搜影视</span>
-								</div>
-					
-
-								
-	                    	</div>
-	                    </div>
-	                    <form action="https://www.baidu.com/s" method="GET" target="_blank" id='searchCheck' >
-	                        <input type="text" value="" x-webkit-speech="" lang="zh-CN" placeholder="输入关键词探索更大的世界！" name="wd" id='search' class="textb" autocomplete="off">
-	                        <input type="submit" value=" " class="subb" id='searchBtn' title="不填关键词试试">
-	                    </form>
-	                    <div class="promptBtn"></div>
-	                    <div class="promptText"><b>不喜欢该搜索引擎？</b><br>点击搜索框最左侧图标<br>可切换为其他搜索引擎</div>
-	                    <div class="keyword"></div>
-	                </div>
-	            </div>
-	        <!--end start-->	
-			
-
-<!--搜索框结束-->
-
-
-		<dl id="hSiteNav">
-			<dd class="currentHNav hNav hChangyongBtn">常用</dd>
-			<dd class="hNav hZhengfaBtn">政法</dd>
-			<dd class="hNav hBangongBtn">办公</dd>
-			<dd class="hNav hSosoBtn">检索</dd>
-			<dd class="hNav hGongjuBtn">工具</dd>
-			<dd class="hNav hXuexiBtn">学习</dd>
-			<dd class="hNav hQuzhanBtn">趣站</dd>
-			<dd class="hNav hShenghuoBtn">休闲</dd>
-			<dd class="hNav hZhanzhangBtn">IT</dd>
-			<dd class="hNav hShejiBtn">设计</dd>
-			<dd class="hNav hTukuBtn">素材</dd>
-
-			
-		</dl>
-
-		<div class="hSiteBigBox">		
-
-<!--综合-->	
-			<div class="hSiteBox hChangyong">
-				<div class="hSiteLine"><!--第一行-->
-
-					<a href="http://www.szlawyers.com/" class="hSite" target="_blank" >
-						<img src="ico/lawfirm.ico"/>
-						<span class="hSiteName">深圳律协</span>
-					</a>
-					<a href="https://www.88.com/" class="hSite" target="_blank" >
-						<img src="ico/88.png"/>
-						<span class="hSiteName">88邮箱</span>
-					</a>
-					<a href="https://weread.qq.com/" class="hSite" target="_blank">
-						<img src="ico/weread.ico"/>
-						<span class="hSiteName">微信读书</span>
-					</a>
-					<a href="https://bypic.tuchong.com/" class="hSite" target="_blank" >
-						<img src="ico/tuchong.ico"/>
-						<span class="hSiteName">图虫摄影</span>
-					</a>
-					<a href="http://gongbao.court.gov.cn/" class="hSite" target="_blank">
-						<img src="ico/fayuan.ico"/>
-						<span class="hSiteName">最高院公报</span>
-					</a>
-					<a href="http://wenshu.court.gov.cn/" class="hSite" target="_blank">
-						<img src="ico/caipan.ico"/>
-						<span class="hSiteName">裁判文书网</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="https://mail.email.cn/" class="hSite" target="_blank">
-						<img src="ico/email.png"/>
-						<span class="hSiteName">Email</span>
-					</a>	
-					<a href="https://docs.qq.com/" class="hSite" target="_blank">
-						<img src="ico/qqdoc.ico"/>
-						<span class="hSiteName">腾讯文档</span>
-					</a>	
-					<a href="https://www.yuque.com/dashboard" class="hSite" target="_blank">
-						<img src="ico/yuque.png"/>
-						<span class="hSiteName">语雀</span>
-					</a> 
-					<a href="https://mp.weixin.qq.com/" class="hSite" target="_blank" >
-						<img src="ico/wxmp.ico"/>
-						<span class="hSiteName">公众号</span>
-					</a>
-					<a href="http://highso.cn/v5/my/course" class="hSite" target="_blank" >
-						<img src="ico/haixue.ico"/>
-						<span class="hSiteName">嗨学网</span>
-					</a>
-					<a href="https://alphalawyer.cn/" class="hSite" target="_blank">
-						<img src="ico/alpha.ico"/>
-						<span class="hSiteName">Alpha</span>
-					</a> 
-				</div>
-				
-				<div class="hSiteLine"><!--第三行-->
-					<a href="https://www.tianyancha.com/" class="hSite" target="_blank" >
-						<img src="ico/tyc.ico"/>
-						<span class="hSiteName">天眼查</span>
-					</a>		
-					<a href="https://www.cnki.net/" class="hSite" target="_blank" >
-						<img src="ico/cnki.ico"/>
-						<span class="hSiteName">中国知网</span>
-					</a>	
-					<a href="https://www.bilibili.com/" class="hSite" target="_blank" >
-						<img src="ico/bilibili.ico"/>
-						<span class="hSiteName">哔哩哔哩</span>
-					</a>	
-					<a href="http://mail.tju.edu.cn/" class="hSite" target="_blank">
-						<img src="ico/tju.ico"/>
-						<span class="hSiteName">天大邮箱</span>
-					</a>
-					<a href="https://shimo.im/" class="hSite" target="_blank">
-						<img src="ico/shimo.ico"/>
-						<span class="hSiteName">石墨文档</span>
-					</a>
-
-					<a href="http://tianjin.lsfwpt.cn/login" class="hSite" target="_blank">
-						<img src="ico/lawfirm.ico"/>
-						<span class="hSiteName">天津律协</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-					
-				</div>
-				
-			</div>
-
-<!--政法-->
-			<div class="hSiteBox hZhengfa">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://ssfw.gdcourts.gov.cn" class="hSite" target="_blank">
-						<img src="ico/gdcourt.ico"/>
-						<span class="hSiteName">广东诉讼服务</span>
-					</a>
-					<a href="http://www.moj.gov.cn/" class="hSite" target="_blank">
-						<img src="ico/sifabu.ico"/>
-						<span class="hSiteName">司法部</span>
-					</a>
-					<a href="https://www.chinacourt.org/" class="hSite" target="_blank">
-						<img src="ico/fayuan.ico"/>
-						<span class="hSiteName">中国法院网</span>
-					</a>	
-					<a href="http://www.law-lib.com/" class="hSite" target="_blank">
-						<img src="ico/law-lib.ico"/>
-						<span class="hSiteName">法律图书馆</span>
-					</a>	
-					<a href="https://www.legalweekly.cn/" class="hSite" target="_blank">
-						<img src="ico/fzzm.ico"/>
-						<span class="hSiteName">法治周末</span>
-					</a>	
-					<a href="http://www.court.gov.cn/" class="hSite" target="_blank">
-						<img src="ico/fayuan.ico"/>
-						<span class="hSiteName">最高人民法院</span>
-					</a>	
-
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="http://tjfy.chinacourt.gov.cn/" class="hSite" target="_blank">
-						<img src="ico/fayuan.ico"/>
-						<span class="hSiteName">天津法院网</span>
-					</a>
-					<a href="http://www.civillaw.com.cn/" class="hSite" target="_blank" >
-						<img src="ico/civilaw.ico"/>
-						<span class="hSiteName">民商法</span>
-					</a>
-					<a href="http://www.legalinfo.gov.cn/" class="hSite" target="_blank" >
-						<img src="ico/legalinfo.png"/>
-						<span class="hSiteName">中国普法网</span>
-					</a>
-					<a href="http://www.npc.gov.cn/npc/c12435/list.shtml" class="hSite" target="_blank" >
-						<img src="ico/default.ico"/>
-						<span class="hSiteName">全国人大</span>
-					</a>
-					<a href="http://www.ajxxgk.jcy.gov.cn/12309/gj/tj/index.shtml" class="hSite" target="_blank" >
-						<img src="ico/jcy.ico"/>
-						<span class="hSiteName">中国检察网</span>
-					</a>
-					<a href="http://zxgk.court.gov.cn/" class="hSite" target="_blank">
-						<img src="ico/fayuan.ico"/>
-						<span class="hSiteName">执行信息公开</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-					<a href="http://www.acla.org.cn/home/toPage" class="hSite" target="_blank" >
-						<img src="ico/lawfirm.ico"/>
-						<span class="hSiteName">中国律师网</span>
-					</a>
-
-
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-	
-			
-				</div>
-				
-			</div>
-
-<!--办公-->
-			<div class="hSiteBox hBangong">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://www.yuque.com/dashboard" class="hSite" target="_blank">
-						<img src="ico/yuque.png"/>
-						<span class="hSiteName">语雀</span>
-					</a> 
-					<a href="https://shimo.im/" class="hSite" target="_blank">
-						<img src="ico/shimo.ico"/>
-						<span class="hSiteName">石墨文档</span>
-					</a>
-					<a href="https://translate.google.cn/" class="hSite" target="_blank">
-						<img src="ico/ggt.ico"/>
-						<span class="hSiteName">谷歌翻译</span>
-					</a>	
-					<a href="http://www.pptbz.com/" class="hSite" target="_blank">
-						<img src="ico/pptbz.ico"/>
-						<span class="hSiteName">ppt宝藏</span>
-					</a>
-					<a href="http://www.ypppt.com/" class="hSite" target="_blank">
-						<img src="ico/yppt.ico"/>
-						<span class="hSiteName">优品ppt</span>
-					</a>
-					<a href="http://www.51pptmoban.com/" class="hSite" target="_blank">
-						<img src="ico/51ppt.ico"/>
-						<span class="hSiteName">51ppt模板</span>
-					</a>
-
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="http://www.hiwenku.com/" class="hSite" target="_blank">
-						<img src="ico/default.ico"/>
-						<span class="hSiteName">嗨文库</span>
-					</a>	
-					<a href="https://note.wps.cn/" class="hSite" target="_blank" >
-						<img src="ico/wpsnote.ico"/>
-						<span class="hSiteName">WPS便签</span>
-					</a>
-					<a href="https://cowtransfer.com/" class="hSite" target="_blank" >
-						<img src="ico/cowtransfer.png"/>
-						<span class="hSiteName">奶牛快传</span>
-					</a>
-					<a href="https://wetransfer.com/" class="hSite" target="_blank" >
-						<img src="ico/wetransfer.ico"/>
-						<span class="hSiteName">Wetransfer</span>
-					</a>
-					<a href="https://mubu.com/" class="hSite" target="_blank" >
-						<img src="ico/mubu.ico"/>
-						<span class="hSiteName">幕布</span>
-					</a>
-					<a href="https://www.wenshushu.cn/" class="hSite" target="_blank" >
-						<img src="ico/wenshushu.ico"/>
-						<span class="hSiteName">文叔叔</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-					<a href="https://www.ilovepdf.com/zh-cn" class="hSite" target="_blank" >
-						<img src="ico/ilovepdf.png"/>
-						<span class="hSiteName">PDF工具箱</span>
-					</a>
-					<a href="http://www.1ppt.com/" class="hSite" target="_blank" >
-						<img src="ico/1ppt.ico"/>
-						<span class="hSiteName">第一PPT</span>
-					</a>
-					<a href="http://www.officeplus.cn/Template/Home.shtml" class="hSite" target="_blank" >
-						<img src="ico/officep.ico"/>
-						<span class="hSiteName">微软模板</span>
-					</a>
-					<a href="https://www.88.com/" class="hSite" target="_blank" >
-						<img src="ico/88.png"/>
-						<span class="hSiteName">88邮箱</span>
-					</a>
-					<a href="https://mail.sina.com.cn/" class="hSite" target="_blank">
-						<img src="ico/sinamail.ico"/>
-						<span class="hSiteName">新浪邮箱</span>
-					</a>	
-					<a href="https://cloud.kzspp.com/login.html" class="hSite" target="_blank">
-						<img src="ico/kzapp.ico"/>
-						<span class="hSiteName">旷真云</span>
-					</a>	
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-				
-                </div>
-          </div>
-
-<!---检索-->
-             <div class="hSiteBox hSoso">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://duxiaofa.baidu.com" class="hSite" target="_blank">
-						<img src="ico/baidu.ico"/>
-						<span class="hSiteName">度小法</span>
-					</a>
-					<a href="http://wenshu.court.gov.cn/" class="hSite" target="_blank">
-						<img src="ico/caipan.ico"/>
-						<span class="hSiteName">裁判文书网</span>
-					</a>
-					<a href="https://www.66law.cn/tiaoli/" class="hSite" target="_blank">
-						<img src="ico/66law.ico"/>
-						<span class="hSiteName">华律网</span>
-					</a>	
-					<a href="https://www.itslaw.com/home" class="hSite" target="_blank">
-						<img src="ico/wusong.ico"/>
-						<span class="hSiteName">无讼</span>
-					</a>	
-					<a href="https://www.jufaanli.com/" class="hSite" target="_blank">
-						<img src="ico/jufa.ico"/>
-						<span class="hSiteName">聚法案例</span>
-					</a>	
-					<a href="https://alphalawyer.cn/" class="hSite" target="_blank">
-						<img src="ico/alpha.ico"/>
-						<span class="hSiteName">Alpha</span>
-					</a> 
-
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="https://www.ilawpress.com/law/group" class="hSite" target="_blank" >
-						<img src="ico/youzhang.ico"/>
-						<span class="hSiteName">有章</span>
-					</a>
-					<a href="http://faxin.cn/" class="hSite" target="_blank">
-						<img src="ico/faxin.ico"/>
-						<span class="hSiteName">法信</span>
-					</a> 
-					<a href="https://www.pkulaw.com/" class="hSite" target="_blank" >
-						<img src="ico/pkufb.ico"/>
-						<span class="hSiteName">北大法宝</span>
-					</a>
-					<a href="https://www.lawsdata.com/#/home" class="hSite" target="_blank" >
-						<img src="ico/bashou.ico"/>
-						<span class="hSiteName">把手案例</span>
-					</a>
-					<a href="https://flk.npc.gov.cn/index.html" class="hSite" target="_blank" >
-						<img src="ico/sifabu.ico"/>
-						<span class="hSiteName">国家法律库</span>
-					</a>
-					<a href="https://law.wkinfo.com.cn/" class="hSite" target="_blank" >
-						<img src="ico/wkxx.png"/>
-						<span class="hSiteName">威科先行</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-					<a href="http://www.gsxt.gov.cn/index.html" class="hSite" target="_blank" >
-						<img src="ico/sifabu.ico"/>
-						<span class="hSiteName">企业信用信息</span>
-					</a>
-					<a href="http://www.gjsy.gov.cn/cxzl/" class="hSite" target="_blank" >
-						<img src="ico/sifabu.ico"/>
-						<span class="hSiteName">事业单位查询</span>
-					</a>
-					<a href="http://wcjs.sbj.cnipa.gov.cn/txnT01.do" class="hSite" target="_blank" >
-						<img src="ico/cnipa.ico"/>
-						<span class="hSiteName">商标查询</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-					
-				</div>
-				
-			 </div>
-
-<!--工具-->
-			<div class="hSiteBox hGongju">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://www.quzhuanpan.com/" class="hSite" target="_blank" >
-						<img src="ico/panduoduo.ico"/>
-						<span class="hSiteName">网盘搜索</span>
-					</a>
-
-					<a href="https://shimo.im/" class="hSite" target="_blank" >
-						<img src="ico/shimo.ico"/>
-						<span class="hSiteName">石墨文档</span>
-					</a>	
-					<a href="https://pan.baidu.com/" class="hSite" target="_blank" >
-						<img src="ico/baiduyun.ico"/>
-						<span class="hSiteName">百度云盘</span>
-					</a>	
-					<a href="https://cli.im/" class="hSite" target="_blank" >
-						<img src="ico/caoliao.ico"/>
-						<span class="hSiteName">草料二维码</span>
-					</a>	
-					<a href="http://www.bejson.com/" class="hSite" target="_blank">
-						<img src="ico/tuchuang.png"/>
-						<span class="hSiteName">网站工具</span>
-					</a>
-					<a href="http://www.fontke.com/tool/convfont/" class="hSite" target="_blank" >
-						<img src="ico/ztzh.ico"/>
-						<span class="hSiteName">字体转化</span> 
-                   			</a>  
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="https://imgchr.com/" class="hSite" target="_blank">
-						<img src="ico/img.png"/>
-						<span class="hSiteName">路过图床</span>
-					</a>	
-					<a href="https://exmail.qq.com/login" class="hSite" target="_blank">
-						<img src="ico/txmail.ico"/>
-						<span class="hSiteName">腾讯企业邮</span>
-					</a>
-					<a href="https://moeclub.org/directlink" class="hSite" target="_blank" >
-						<img src="ico/zhilian.ico"/>
-						<span class="hSiteName">网盘直链</span> 
-                   			</a>
-
-					<a href="https://www.lanzou.com/" class="hSite" target="_blank" >
-						<img src="ico/lanzhou.ico"/>
-						<span class="hSiteName">蓝奏云</span>
-					</a>
-					<a href="https://webkul.github.io/coolhue/" class="hSite" target="_blank" >
-						<img src="ico/coolhud.ico"/>
-						<span class="hSiteName">渐变配色</span>
-					</a>
-					<a href="https://imagecompressor.com/zh/" class="hSite" target="_blank" >
-						<img src="ico/picys.png"/>
-						<span class="hSiteName">图片压缩</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-
-					<a href="https://zh.pixfix.com/" class="hSite" target="_blank" >
-						<img src="https://d1r4k4kkp2obq0.cloudfront.net/p/assets/images/language-picker_f48a15b45c82697f89812813c0fb8052.svg"/>
-						<span class="hSiteName">修复失真图</span>
-					</a>
-					<a href="http://t.pp.cc/time/" class="hSite" target="_blank" >
-						<img src="ico/ppcc.ico"/>
-						<span class="hSiteName">皮皮时光机</span>
-					</a>	
-					<a href="https://www.weiyun.com/" class="hSite" target="_blank" >
-						<img src="ico/weiyun.ico"/>
-						<span class="hSiteName">微云</span>
-					</a>
-					<a href="https://www.apowersoft.cn/heic-to-jpg" class="hSite" target="_blank" >
-						<img src="ico/heic.ico"/>
-						<span class="hSiteName">HEIC转化</span>
-					</a>
-					<a href="http://open.xiaoi.com/" class="hSite" target="_blank" >
-						<img src="ico/xiaoi.ico"/>
-						<span class="hSiteName">小i开放平台</span>
-					</a>
-					<a href="http://api.fanyi.baidu.com/api/trans/product/desktop" class="hSite" target="_blank" >
-						<img src="ico/baiduAI.png"/>
-						<span class="hSiteName">翻译开放平台</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-
-
- 
-
-				</div>
-            
-				
-			</div>
-
-<!--学习-->
-			<div class="hSiteBox hXuexi">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://www.pypypy.cn/" class="hSite" target="_blank" >
-						<img src="ico/pypypy.ico"/>
-						<span class="hSiteName">风向编程</span>
-					</a>	
-					<a href="https://open.163.com/ted/" class="hSite" target="_blank">
-						<img src="ico/163ke.ico"/>
-						<span class="hSiteName">网易公开课</span>
-					</a>	
-					<a href="http://www.51zxw.net/" class="hSite" target="_blank">
-						<img src="ico/51zxw.ico"/>
-						<span class="hSiteName">我要自学网</span>
-					</a>	
-					<a href="http://www.doyoudo.com/" class="hSite" target="_blank">
-						<img src="ico/doyoudo.ico"/>
-						<span class="hSiteName">DoYouDo</span>
-					</a>
-					<a href="https://www.imooc.com/" class="hSite" target="_blank">
-						<img src="ico/muke.ico"/>
-						<span class="hSiteName">慕课网</span>
-					</a>
-					<a href="https://xue.youdao.com/" class="hSite" target="_blank">
-						<img src="ico/ydjpk.ico"/>
-						<span class="hSiteName">有道精品课</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="https://www.cnki.net/" class="hSite" target="_blank">
-						<img src="ico/cnki.ico"/>
-						<span class="hSiteName">中国知网</span>
-					</a>
-					<a href="http://www.wanfangdata.com.cn/index.html" class="hSite" target="_blank">
-						<img src="ico/wanfang.ico"/>
-						<span class="hSiteName">万方数据</span>
-					</a>
-					<a href="http://www.missyuan.net/" class="hSite" target="_blank">
-						<img src="ico/missyuan.ico"/>
-						<span class="hSiteName">PS设计教程</span>
-					</a>
-	
-					<a href="https://huke88.com/" class="hSite" target="_blank">
-						<img src="ico/huke.ico"/>
-						<span class="hSiteName">虎课网</span>
-					</a>	
-					<a href="http://highso.cn/v5/my/course" class="hSite" target="_blank" >
-						<img src="ico/haixue.ico"/>
-						<span class="hSiteName">嗨学网</span>
-					</a>
-					<a href="http://www.houdask.com" class="hSite" target="_blank">
-						<img src="ico/houda.ico"/>
-						<span class="hSiteName">厚大法考</span>
-					</a>
-
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-
-					<a href="https://www.juexiaotime.com/" class="hSite" target="_blank" >
-						<img src="ico/juexiao.ico"/>
-						<span class="hSiteName">觉晓法考</span>
-					</a>
-					<a href="https://www.zhumavip.com/" class="hSite" target="_blank" >
-						<img src="ico/zhuma.ico"/>
-						<span class="hSiteName">竹马法考</span>
-					</a>
-					<a href="https://wx.zsxq.com/" class="hSite" target="_blank" >
-						<img src="ico/zsxq.ico"/>
-						<span class="hSiteName">知识星球</span>
-					</a>
-					<a href="https://pc.mijialaw.com/index" class="hSite" target="_blank" >
-						<img src="ico/default.ico"/>
-						<span class="hSiteName">法律名家讲堂</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-
-				</div>
-				
-			</div>
-
-<!--趣站-->
-			<div class="hSiteBox hQuzhan">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://www.duitang.com/" class="hSite" target="_blank">
-						<img src="ico/duitang.ico"/>
-						<span class="hSiteName">堆糖</span>
-					</a>	
-					<a href="https://meiriyiwen.com/random" class="hSite" target="_blank">
-						<img src="ico/mryw.ico"/>
-						<span class="hSiteName">每日一文</span>
-					</a>			
-					<a href="https://www.juzikong.com/" class="hSite" target="_blank">
-						<img src="ico/juzikong.ico"/>
-						<span class="hSiteName">句子控</span>
-					</a>	
-					<a href="https://www.todaybing.com/" class="hSite" target="_blank">
-						<img src="ico/bing.png"/>
-					   <span class="hSiteName">必应壁纸</span>
-					</a> 
-					<a href="https://www.mingyantong.com/" class="hSite" target="_blank">
-						<img src="ico/mingyantong.ico"/>
-					   <span class="hSiteName">名言通</span>
-					</a> 
-					<a href="https://www.52pojie.cn/" class="hSite" target="_blank" >
-						<img src="ico/52pojie.ico"/>
-						<span class="hSiteName">吾爱破解</span> 
-                   			</a>    
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="http://www.manshijian.com/" class="hSite" target="_blank">
-						<img src="ico/mantime.ico"/>
-						<span class="hSiteName">慢时间</span>
-					</a>	
-					<a href="http://www.hougelou.com/" class="hSite" target="_blank">
-						<img src="ico/hgl.ico"/>
-						<span class="hSiteName">后阁楼</span>
-					</a>	
-					<a href="https://lawnote.cn/" class="hSite" target="_blank">
-						<img src="ico/lawnote.ico"/>
-						<span class="hSiteName">法律笔记</span>
-					</a>	
-					<a href="https://www.ugediao.com/category/reading" class="hSite" target="_blank">
-						<img src="ico/ugediao.ico"/>
-						<span class="hSiteName">有格调</span>
-					</a>	
-					<a href="https://gridea.dev/" class="hSite" target="_blank">
-						<img src="ico/gri.png"/>
-						<span class="hSiteName">Gridea</span>
-					</a> 
-					<a href="https://dribbble.com/" class="hSite" target="_blank">
-						<img src="ico/dribbble.ico"/>
-						<span class="hSiteName">Dribbble</span>
-					</a> 
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-					<a href="https://www.baideye.com/" class="hSite" target="_blank">
-						<img src="ico/baideye.ico"/>
-						<span class="hSiteName">白的夜</span>
-					</a> 
-					<a href="https://jikipedia.com/" class="hSite" target="_blank">
-						<img src="ico/xiaoji.ico"/>
-						<span class="hSiteName">小鸡词典</span>
-					</a> 
-
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-					
-				</div>
-				
-			</div>
-
-<!--素材-->
-			<div class="hSiteBox hTuku">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://699pic.com/" class="hSite" target="_blank">
-						<img src="ico/shetu.ico"/>
-						<span class="hSiteName">摄图网</span>
-					</a>
-					<a href="https://588ku.com/" class="hSite" target="_blank">
-						<img src="ico/qianku.ico"/>
-						<span class="hSiteName">千库网</span>
-					</a>
-					<a href="https://www.pexels.com/zh-cn/" class="hSite" target="_blank">
-						<img src="ico/pexels.png"/>
-						<span class="hSiteName">Pexels</span>
-					</a>
-					<a href="https://pixabay.com/zh/" class="hSite" target="_blank">
-						<img src="ico/pixa.ico"/>
-						<span class="hSiteName">Pixabay</span>
-					</a>
-					<a href="https://unsplash.com/" class="hSite" target="_blank">
-						<img src="ico/unsplash.png"/>
-						<span class="hSiteName">Unsplash</span>
-					</a>
-					<a href="https://www.sitebuilderreport.com/stock-up/" class="hSite" target="_blank">
-						<img src="ico/stock.ico"/>
-						<span class="hSiteName">Stock up</span>
-					</a>	
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="https://www.hippopx.com/zh/" class="hSite" target="_blank">
-						<img src="ico/piq.ico"/>
-						<span class="hSiteName">Hippopx</span>
-					</a>
-					<a href="https://7mx.com/" class="hSite" target="_blank">
-						<img src="https://static.7mx.com/static/favicon.ico"/>
-						<span class="hSiteName">7MX</span>
-					</a>
-					<a href="https://visualhunt.com/" class="hSite" target="_blank">
-						<img src="ico/visualhunt.ico"/>
-						<span class="hSiteName">Visualhunt</span>
-					</a>
-					<a href="https://gratisography.com/" class="hSite" target="_blank">
-						<img src="ico/gratis.ico"/>
-						<span class="hSiteName">Gratisography</span>
-					</a>
-					<a href="https://stocksnap.io/" class="hSite" target="_blank">
-						<img src="ico/stock.png"/>
-						<span class="hSiteName">Stocksnap</span>
-					</a>
-					<a href="https://www.hdwallpapers.net/" class="hSite" target="_blank">
-						<img src="ico/hdwall.ico"/>
-						<span class="hSiteName">HDwallpapers</span>
-					</a>
-
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-					<a href="https://www.splitshire.com/" class="hSite" target="_blank">
-						<img src="ico/splitshire.ico"/>
-						<span class="hSiteName">Splitshire</span>
-					</a>
-					<a href="https://www.skypixel.com/" class="hSite" target="_blank">
-						<img src="ico/skyp.ico"/>
-						<span class="hSiteName">天空之城</span>
-					</a>
-					<a href="http://original.wlppr.co/" class="hSite" target="_blank">
-						<img src="ico/wlppr.png"/>
-						<span class="hSiteName">WLPPR</span>
-					</a>
-					<a href="https://cn.freeimages.com/" class="hSite" target="_blank">
-						<img src="ico/freepic.ico"/>
-						<span class="hSiteName">Freeimages</span>
-					</a>
-					<a href="http://www.polayoutu.com/collections" class="hSite" target="_blank">
-						<img src="ico/pola.png"/>
-						<span class="hSiteName">泼辣有图</span>
-					</a>
-					<a href="https://picjumbo.com/?darkmode" class="hSite" target="_blank">
-						<img src="ico/default.ico"/>
-						<span class="hSiteName">Picjumbo</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-					<a href="https://coverr.co/" class="hSite" target="_blank">
-						<img src="ico/coverr.ico"/>
-						<span class="hSiteName">Coverr</span>
-					</a> 
-					<a href="http://streetwill.co/" class="hSite" target="_blank">
-						<img src="ico/streetwill.png"/>
-						<span class="hSiteName">Streetwill</span>
-					</a>
-					<a href="http://mazwai.com/" class="hSite" target="_blank">
-						<img src="ico/maz.ico"/>
-						<span class="hSiteName">Mazwai</span>
-					</a>
-					<a href="https://magdeleine.co/browse/" class="hSite" target="_blank">
-						<img src="ico/magdeleine.ico"/>
-						<span class="hSiteName">Magdeleine</span>
-					</a>
-
-				</div>
+    </div>
 
 
 
-			</div>
-
-<!--休闲-->
-			<div class="hSiteBox hShenghuo">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://v.qq.com/" class="hSite" target="_blank">
-						<img src="ico/vqq.ico"/>
-						<span class="hSiteName">腾讯视频</span>
-					</a>	
-					<a href="https://www.youku.com/" class="hSite" target="_blank">
-						<img src="ico/youku.ico"/>
-						<span class="hSiteName">优酷视频</span>
-					</a>	
-					<a href="https://www.yingketuan.com/" class="hSite" target="_blank">
-						<img src="ico/yingketuan.png"/>
-						<span class="hSiteName">影客团</span>
-					</a>
-					<a href="https://photos.google.com/" class="hSite" target="_blank">
-						<img src="ico/ggxc.png"/>
-						<span class="hSiteName">谷歌相册</span>
-					</a> 
-					<a href="https://www.youtube.com/" class="hSite" target="_blank">
-						<img src="ico/youtube.png"/>
-						<span class="hSiteName">Youtube</span>
-					</a> 
-					<a href="https://www.google.com/" class="hSite" target="_blank">
-						<img src="ico/ggss.ico"/>
-						<span class="hSiteName">谷歌搜索</span>
-					</a> 
-				</div>
-				<div class="hSiteLine"><!--第二行-->
-					<a href="https://withpinbox.com/items" class="hSite" target="_blank">
-						<img src="ico/pinbox.ico"/>
-						<span class="hSiteName">Pinbox</span>
-					</a> 
-					<a href="https://www.bilibili.com/" class="hSite" target="_blank" >
-						<img src="ico/bilibili.ico"/>
-						<span class="hSiteName">哔哩哔哩</span>
-					</a>	
-					<a href="https://www.7-cc.cc/" class="hSite" target="_blank" >
-						<img src="ico/7cc.jpg"/>
-						<span class="hSiteName">CC影院</span>
-					</a>
-					<a href="https://www.cupfox.com/" class="hSite" target="_blank" >
-						<img src="ico/cupfox.png"/>
-						<span class="hSiteName">Cupfox</span>
-					</a>	
-					<a href="http://neets.cc/" class="hSite" target="_blank" >
-						<img src="ico/neets.ico"/>
-						<span class="hSiteName">Neets</span>
-					</a>	
-					<a href="http://weibodang.cn/" class="hSite" target="_blank" >
-						<img src="ico/weibodang.ico"/>
-						<span class="hSiteName">微博党</span>
-					</a>	
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-					<a href="https://wallhaven.cc/" class="hSite" target="_blank">
-						<img src="ico/wallhaven.ico"/>
-						<span class="hSiteName">Wallhaven</span>
-					</a>
-					<a href="http://www.win4000.com/" class="hSite" target="_blank">
-						<img src="ico/meizhuo.ico"/>
-						<span class="hSiteName">美桌网</span>
-					</a>
-					<a href="https://music.163.com/" class="hSite" target="_blank">
-						<img src="ico/163music.ico"/>
-						<span class="hSiteName">网易云音乐</span>
-					</a>
-					<a href="https://weibo.com/" class="hSite" target="_blank" >
-						<img src="ico/weibo.ico"/>
-						<span class="hSiteName">微博</span>
-					</a>
-					<a href="https://www.zhihu.com/" class="hSite" target="_blank" >
-						<img src="ico/zhihu.ico"/>
-						<span class="hSiteName">知乎</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-					
-				</div>
-				
-			</div>
-
-<!--IT-->
-			<div class="hSiteBox hZhanzhang">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://github.com/login" class="hSite" target="_blank" >
-						<img src="ico/github.ico"/>
-						<span class="hSiteName">github</span>
-					</a>	
-					<a href="https://cloud.tencent.com/" class="hSite" target="_blank" >
-						<img src="ico/qyun.ico"/>
-						<span class="hSiteName">腾讯云</span>
-					</a>	
-
-					<a href="https://www.upyun.com/" class="hSite" target="_blank">
-						<img src="ico/upyun.ico"/>
-						<span class="hSiteName">又拍云</span>
-					</a>
-					<a href="http://www.w3school.com.cn/" class="hSite" target="_blank">
-						<img src="ico/w3.png"/>
-						<span class="hSiteName">w3school</span>
-					</a>
-					<a href="https://www.wjx.cn/" class="hSite" target="_blank">
-						<img src="ico/wjx.ico"/>
-						<span class="hSiteName">问卷星</span>
-					</a>	
-					<a href="http://www.bootcss.com/" class="hSite" target="_blank">
-						<img src="ico/boots.ico"/>
-						<span class="hSiteName">Bootstrap</span>
-					</a>              
-                  
-				</div>
-              
-				<div class="hSiteLine"><!--第二行-->
-					<a href="https://ziyuan.baidu.com/" class="hSite" target="_blank" >
-						<img src="ico/baidu.ico"/>
-						<span class="hSiteName">百度站长</span>
-					</a>
-					<a href="https://007.qq.com/" class="hSite" target="_blank">
-						<img src="ico/fsq.ico"/>
-						<span class="hSiteName">腾讯防水墙</span>
-					</a> 
-					<a href="http://www.fonts.net.cn/" class="hSite" target="_blank">
-						<img src="ico/font.ico"/>
-						<span class="hSiteName">字体天下</span>
-					</a>
-					<a href="https://console.dnspod.cn/dns/list" class="hSite" target="_blank">
-						<img src="ico/dnspod.ico"/>
-						<span class="hSiteName">DNSPod</span>
-					</a>
-					<a href="https://tool.lu" class="hSite" target="_blank">
-						<img src="ico/tool.ico"/>
-						<span class="hSiteName">在线工具</span>
-					</a> 
-					<a href="https://www.screensizemap.com/" class="hSite" target="_blank">
-						<img src="ico/pmcc.png"/>
-						<span class="hSiteName">屏幕尺寸</span>
-					</a> 
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-
-					<a href="http://tool.mkblog.cn/" class="hSite" target="_blank">
-						<img src="ico/mktool.ico"/>
-						<span class="hSiteName">孟坤工具箱</span>
-					</a> 
-					<a href="https://dash.cloudflare.com/" class="hSite" target="_blank" >
-						<img src="ico/cloudfare.ico"/>
-						<span class="hSiteName">cloudflare</span>
-					</a>	
-					<a href="https://www.iconfont.cn/" class="hSite" target="_blank">
-						<img src="ico/iconfont.ico"/>
-						<span class="hSiteName">iconfont</span>
-					</a>
-					<a href="https://neumorphism.io/" class="hSite" target="_blank">
-						<img src="ico/nitai.ico"/>
-						<span class="hSiteName">新拟态效果</span>
-					</a>
-					<a href="https://gitee.com/" class="hSite" target="_blank">
-						<img src="ico/gitee.ico"/>
-						<span class="hSiteName">gitee</span>
-					</a>
-					<a href="https://auth.geetest.com/login/" class="hSite" target="_blank" >
-						<img src="ico/geetest.ico"/>
-						<span class="hSiteName">极验</span>
-					</a>
-				</div>
-
-				<div class="hSiteLine"><!--第四行-->
-
-				</div>
-				
-			</div>
-
-<!--设计-->
-			<div class="hSiteBox hSheji">
-				<div class="hSiteLine"><!--第一行-->
-					<a href="https://www.canva.cn/" class="hSite" target="_blank">
-						<img src="ico/canva.ico"/>
-						<span class="hSiteName">Canva</span>
-					</a>         
-					<a href="https://www.zcool.com.cn/" class="hSite" target="_blank">
-						<img src="ico/zcool.ico"/>
-						<span class="hSiteName">站酷</span>
-					</a>
-					<a href="http://www.dingdangsheji.com/" class="hSite" target="_blank">
-						<img src="ico/ddsheji.ico"/>
-						<span class="hSiteName">叮当设计</span>
-					</a>
-					<a href="https://www.hellofont.cn/" class="hSite" target="_blank">
-						<img src="ico/hellofont.ico"/>
-						<span class="hSiteName">字由</span>
-					</a>
-					<a href="http://hao.shejidaren.com" class="hSite" target="_blank">
-						<img src="ico/shejidaren.ico"/>
-						<span class="hSiteName">设计达人</span>
-					</a>
-					<a href="https://www.gaoding.com/koutu" class="hSite" target="_blank" >
-						<img src="ico/koutu.ico"/>
-						<span class="hSiteName">在线抠图</span>
-					</a>
-				</div>
-              
-				<div class="hSiteLine"><!--第二行-->
-					<a href="https://edit.newrank.cn/" class="hSite" target="_blank" >
-						<img src="ico/xinbang.ico"/>
-						<span class="hSiteName">新榜编辑器</span>
-					</a>
-					<a href="https://www.chuangkit.com/" class="hSite" target="_blank" >
-						<img src="ico/ckt.ico"/>
-						<span class="hSiteName">创客贴</span>
-					</a>
-					<a href="https://www.9thws.com/Nf/MEM1001/index.html" class="hSite" target="_blank">
-						<img src="ico/9thws.ico"/>
-						<span class="hSiteName">第九工厂</span>
-					</a>
-					<a href="http://3png.com/" class="hSite" target="_blank">
-						<img src="ico/3png.png"/>
-						<span class="hSiteName">三元素</span>
-					</a>
-				</div>
-				<div class="hSiteLine"><!--第三行-->
-
-				</div>
-				<div class="hSiteLine"><!--第四行-->
-
-				</div>
-				
-			</div>	
 
 
-</div>
-</div>
-<div class="footer">
 
-</div>
+
+
+
+
+
+
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-<script>
-WIDGET = {
-  CONFIG: {
-    "modules": "12304",
-    "background": 2,
-    "tmpColor": "4A4A4A",
-    "tmpSize": 16,
-    "cityColor": "4A4A4A",
-    "citySize": 16,
-    "aqiSize": 16,
-    "weatherIconSize": 24,
-    "alertIconSize": 18,
-    "padding": "10px 10px 10px 10px",
-    "shadow": "1",
-    "language": "auto",
-    "borderRadius": 5,
-    "fixed": "false",
-    "vertical": "middle",
-    "horizontal": "left",
-    "key": "afa1538004424c8d9d12b7d3775ec1c6"
-  }
-}
+	
+<script type="text/javascript" src="static/activate-power-mode.js"></script>  
+<script>  
+	POWERMODE.colorful = true;  // 冒光特效  
+	POWERMODE.shake = false;    // 抖动特效  
+	document.body.addEventListener('input', POWERMODE); // 为所有 input 标签都加上特效  
+  $(".idTabs").idTabs(); //必须加载该js，否则初始加载会闪烁出现全部tab内容，然后才会隐藏。
 </script>
 
-<script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
-<script src="activate-power-mode.js"></script>  
-<script>  
-POWERMODE.colorful = true;  // 冒光特效  
-POWERMODE.shake = false;    // 抖动特效  
-document.body.addEventListener('input', POWERMODE); // 为所有 input 标签都加上特效  
-</script>  
-<script type="text/javascript">
-	
-$(function(){
-	// 获取时间
-	var nowDate = new Date();     
-	var year = nowDate.getFullYear();    
-	var month = nowDate.getMonth() + 1 < 10 ? "0" + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;    
-	var date = nowDate.getDate() < 10 ? "0" + nowDate.getDate() : nowDate.getDate();
-	var week = "星期" + "日一二三四五六".split(/(?!\b)/)[nowDate.getDay()];
-	// 添加文本内容到相应的div
-	$(".yearMon").text(year+"年"+month+"月");
-	$(".date").text(date);
-	$(".week").text(week);
-});
-</script>
 </body>
 </html>
-
