@@ -242,9 +242,10 @@ html,body{
 
 .links-list a {
    min-width: 120px;
+   font-family: HYYiSongW;
    display: inline-block;
     line-height: 24px;
-   font-size: 16px;
+    font-size: 16px;
     color: #545454;
     padding: 6px 10px 6px 10px;
     margin: 0 8px 8px 0;
